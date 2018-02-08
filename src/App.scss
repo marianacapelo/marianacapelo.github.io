@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Hairline');
+@import url('https://fonts.googleapis.com/css?family=Mandali|Plaster');
+@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative|Flamenco|Fredericka+the+Great|Kranky|Mandali|Megrim|Overlock+SC|Plaster|Pompiere|Raleway+Dots|Trochut');
+@import url('https://fonts.googleapis.com/css?family=Chathura|Overpass+Mono|Syncopate');
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Reenie+Beanie');
+@import url('https://fonts.googleapis.com/css?family=Gruppo|Love+Ya+Like+A+Sister|Pompiere');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:extra-light');
+
+@import "basic_definitions.scss";
+$fa-font-path: "~font-awesome/fonts";
+@import "../node_modules/font-awesome/scss/font-awesome";
+
+@import "../node_modules/compass-mixins/lib/compass/_css3";
+
+
+.App {
+  //background-color: lightgreen;
+  //background: url('/back/full.png');
+  //background: url('/back/texture.png');
+  background: url('/back/waves.png');
+
+  text-align: center;
+  line-height: 1.5em;
+  font-family: 'Montserrat', sans-serif;
+  
+  .inner {
+    @media (max-width: 650px) {
+      margin-left: 5%; 
+      margin-right: 5%; 
+    }
+
+    @media (min-width: 650px) and (max-width: 800px) {
+      margin-left: 10%; 
+      margin-right: 10%; 
+    }
+
+    @media (min-width: 800px) and (max-width: 900px) {
+      margin-left: 15%; 
+      margin-right: 15%; 
+    }
+  
+    @media (min-width: 900px) and (max-width: 1000px) {
+      margin-left: 22%; 
+      margin-right: 22%; 
+    }
+
+    @media (min-width: 1000px) and (max-width: 1100px) {
+      margin-left: 25%; 
+      margin-right: 25%; 
+    }
+
+    @media (min-width: 1100px) and (max-width: 1600px){
+      margin-left: 28%; 
+      margin-right: 28%; 
+    }
+
+    @media (min-width: 1600px){
+      margin-left: 30%; 
+      margin-right: 30%; 
+    }
+  }
+
+
+  $vertical-space: 5vh;
+
+  section {
+    padding-top: $vertical-space; 
+    padding-bottom: 7vh; 
+    @media (min-width: 550px) {
+      padding-left: 3%; 
+      padding-right: 3%; 
+    }
+
+    .section-title {
+      margin: 0;
+    }
+
+    .section-content {
+      padding-top: $vertical-space;
+    }
+
+  }
+    
+  #intro {
+    p {
+      text-align: justify;  
+      margin: 0;
+    }
+  }
+
+  #contacts {
+    p {
+      margin: 0;
+    }
+  }
+
+  #hobbies {
+    ul {
+      list-style: none;
+      margin: 0px;
+      padding-left: 0px;
+      padding-right: 0px;
+      display: inline-block;
+        
+      li {
+        float: left;
+        
+        &:not(:last-child):after {
+          padding-left: 22px;
+          padding-right: 22px;
+          content: "\F08A";
+          font-family: FontAwesome;
+          font-size: 0.5em;
+          line-height: 1em;
+          padding-bottom: 0.5em;
+        }
+      }
+    }
+  }
+
+  #experience {
+
+    $card_width: 400px;
+    $card_width_md: 40vw;
+    $spacing: 25px;
+
+    /* Layout */
+    * {
+      @include box-sizing(border-box);
+    }
+
+    /* Styling */
+    .timeline {
+      list-style: none;
+      padding-left: 50%;
+      padding-right: 50%;
+      width: 100%;
+      
+      @media (min-width: 400px) and (max-width: 900px) {
+        width: $card_width;
+      }
+
+      @media (min-width: 900px) {
+        width: 2*$card_width;
+      }
+
+      display: flex;
+      flex-flow: column wrap;
+      margin: 0 auto;
+      position: relative;
+
+      /* Vertical line */
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: calc(50% - 1.5px);
+        border-left: 3px solid $theme-darker-secondary;
+      }
+
+    }
+
+    
+    li {
+
+      position: relative;
+
+      /* Icon */
+      .timeline-icon {
+        
+        @media (min-width: 900px) {
+
+          @include rotate (45deg);  
+          background-color: $theme-lighter;
+          display: block;        
+          
+        }
+
+        width: 1em;
+        height: 1em;
+        margin-left: -0.5em;
+        
+      }
+
+      .timeline-card {
+
+        /* Card Layout */
+        margin-top: -2em;
+        margin-bottom: 5em;
+        
+        width: 96vw;
+        margin-left: -48vw;
+
+        @media (min-width: 400px){
+          width: $card_width;
+          margin-left: -($card_width/2);
+        }
+
+        * {
+          text-align: justify;
+        }
+
+        z-index: 2;
+        background: url('/back/waves.png');
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: 1px solid $theme-darker-secondary;
+        
+        @media (min-width: 900px) {
+
+          background: none;
+          padding-top: 0px;
+          padding-bottom: 0px;
+          border: none;
+
+          &.odd {
+            margin-left: -$card_width;
+            
+            * {
+              text-align: right;
+            }
+          }
+          
+          &.even {
+            margin-left: 0px;
+            * {
+              text-align: left;
+            }
+          }
+        }
+
+        .timeline-card-content {
+          margin: 0px $spacing;
+        }
+
+        /* Thumbnail */
+        .timeline-card-thumbnail {
+          @include transition(box-shadow 0.5s ease-in 0.1s);
+          color: white;
+          font-size: 0.75em;
+          
+          background-color: $theme-lighter;
+          @include box-shadow(inset 0 0 0 0em #ef795a);
+          display: inline-block;
+          margin-bottom: 1.2em;
+          padding: 0.25em 1em 0.2em 1em;
+        }
+
+      }
+      
+      &:hover {
+              
+        .timeline-card-thumbnail {
+          @include box-shadow(inset 40em 0 0 0 $theme-darker-secondary);
+        }
+      }
+    }
+  }
+
+}
+
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+h1 {
+  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Raleway Dots', cursive;
+  font-family: 'Syncopate', sans-serif;
+  font-family: 'Chathura', sans-serif;
+  font-family: 'Gruppo', cursive;
+  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Cabin Sketch';
+}
+
+h2 {
+  font-family: 'Cabin Sketch';
+  font-weight: 100;
+  text-decoration: underline;
+}
+
+.Cover {
+  h2 {
+    font-family: 'Reenie Beanie', cursive;
+    font-family: 'Raleway Dots', cursive;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+  }
+}
+
+
+.transition {
+  height: 60vh;
+  width: 0;
+  border-left: 4px solid $theme-lighter;
+  margin-left: calc(50% - 2px);
+  border-image: linear-gradient(
+    to bottom,
+// Start darker and out of the blue
+//        $theme-lighter-primary 5%,
+//        $theme-lighter 65%,
+// Fade in:
+    rgba($theme-lighter, 0),
+    $theme-lighter 25%,
+    $theme-lighter 65%,
+// Disapear:
+    $theme-lighter
+// Fade out:
+//        $theme-lighter 65%,
+//        rgba($theme-lighter, 0)
+  ) 1 100%;
+
+  @media (min-height: 400px) and (max-height: 500px) {
+    margin-top: -5vh;
+  }
+
+  @media (min-height: 500px) and (max-height: 900px) {
+    margin-top: -10vh;
+  }
+
+  @media (min-height: 900px) {
+    margin-top: -20vh;
+  }
+
+}
+
+

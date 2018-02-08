@@ -1,0 +1,58 @@
+@mixin triangle($h, $total_angle, $border_l) {
+
+  $angle: $total_angle / 2;
+  $rotation_angle: 90deg - $angle;
+
+  $cos: cos($angle);
+  $sin: sin($angle);
+  $tan: tan($angle);
+
+  $cos_complement_angle: cos($rotation_angle);
+  $sin_complement_angle: sin($rotation_angle);
+
+  // border calculations...
+  // rotation will cause movement of border corners
+  // imagine rectangular triangle sitting on top of border width:
+  // rect. angular oposed to border and one end of border will make an angle of (90-$angle)
+  // work with this to find how much the border moved
+  // (lifted by triangle length/2 (delta h) and triangle base/2 to the left (delta x)
+  $border_delta_h: ($cos_complement_angle * $border_l)/2;
+  $border_delta_x: ($sin_complement_angle * $border_l)/2; 
+
+  $hip: calc( #{$h} / #{$cos});
+  $b: calc( #{$h} * #{$tan} ); 
+
+  $raio: #{$hip} / 2;
+  // pedacinho x  = raio - (cos (ang/2) * raio)
+  // overlap pedacinho x na border (retira a left) = 1/4 border delta x (iria começar no centro, começa a 25%)
+  $delta_x: calc( #{$raio} - ( #{$cos_complement_angle} * #{$raio} ) - #{$border_delta_x}/4 );
+  // pedacinho h = h/2 - border/2 
+  // overlap pedacinho y na border (retura a top) = 1/4 border delta y 
+  $delta_h: calc( #{$h} / 2 - #{$border_l} / 2 + #{$border_delta_h} / 2);
+
+  position: relative;
+  display: flex;
+  
+  .side {
+     position: absolute;
+     border-top: $border_l solid $theme-darker-primary;
+     border-radius: $border_l $border_l;
+
+     &.left {
+      width: $hip;
+      @include rotate(-$rotation_angle);
+    }
+
+    &.right {
+      width: $hip;
+      left: calc( #{$b} - #{$border_delta_x} / 4);
+      @include rotate($rotation_angle);
+    }
+
+    &.base {
+      width: calc( 2 * #{$b} + #{$border_delta_x} / 2 );
+      top: $delta_h;
+      left: $delta_x;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+@import "../trig.scss";
+@import "../basic_definitions.scss";
+
+.Cover { 
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+
+  * {
+    text-transform: uppercase;
+  }
+
+  .inner-content {
+    .aligned {
+      width: 100%;
+      > div {
+        display: inline-block;
+        margin-bottom: 13vh;
+      }
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: $theme-darker-primary;
+   }
+
+    h3 {
+      color: $theme-darker-primary;
+    }
+  }
+
+  $height1: 13vh;
+  $height2: 18vh;
+
+  .triangles {
+      
+    > div:nth-child(1) {
+      right: $height1/2;
+      margin-top: 25px;
+    }
+    
+    > div:nth-child(2) {
+      left: - ($height2/2 - $height1/2);
+    }
+
+    .left, 
+    .right {
+      border-color: $theme-darker-secondary;
+    }
+
+    .base {
+      border-color: $theme-lighter;
+    }
+  }
+
+  .upperC {
+    border-color: $theme-darker-secondary;
+    border-top-width: 4px;
+    border-top-style: solid;
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    width: 36px;
+    // 150 - 2 borders of 4
+    height: 142px;
+    margin-left: 50px;
+    margin-top: -48px;
+    margin-right: 10px;
+  }
+}
