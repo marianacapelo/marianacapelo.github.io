@@ -13,10 +13,12 @@ class App extends Component {
         <div className="transition"></div>
 
         <section id="intro" class="inner">
-          <p>
-            Hi! My name is Mariana Capelo, I am 25 years old and I love programming.
-            I am currently finishing my Masters Degree in Software Engineering at University of Minho and currently looking for a new challenge.
-          </p>
+          <div class="intro-card">
+            <p>
+              <span>Hi!</span> My name is Mariana Capelo, I am 25 years old and I love programming.
+              I am currently finishing my Masters Degree in Software Engineering at University of Minho and currently looking for a new challenge.
+            </p>
+          </div>
         </section>
 
         <section id="hobbies" class="inner">
@@ -92,8 +94,17 @@ class App extends Component {
           <h2 class="section-title">Get in touch</h2>
           <div class="section-content">
             <p>
-              mabcapelo@gmail.com
+              I would love to talk!
             </p>
+            <strong>
+              mabcapelo@gmail.com
+            </strong>
+          </div>
+        </section>
+        
+        <section id="footer">
+          <div class="section-content">
+            Mariana Capelo
           </div>
         </section>
       </div>

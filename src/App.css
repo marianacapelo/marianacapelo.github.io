@@ -2335,19 +2335,38 @@
   overflow: visible;
   clip: auto; }
 
+body {
+  font-size: 12px; }
+
+@media (min-width: 800px) {
+  body {
+    font-size: 14px; } }
+
+@media (min-width: 1000px) {
+  body {
+    font-size: 16px; } }
+
 .App {
-  background: url("/back/waves.png");
+  background: url("/back/waves-2.png");
+  /* Text and Fonts */
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.5em;
-  font-family: 'Montserrat', sans-serif; }
+  /* Layout */
+  /* Section styling */ }
 
 .App h1 {
-  font-family: 'Cabin Sketch'; }
+  font-family: 'Cabin Sketch';
+  font-size: 3em; }
 
 .App h2 {
   font-family: 'Cabin Sketch';
   font-weight: 100;
+  font-size: 2em;
   text-decoration: underline; }
+
+.App h1, .App h2, .App h3, .App h4, .App h5 {
+  color: #21271a; }
 
 .App .Cover h2 {
   font-family: 'Montserrat', sans-serif;
@@ -2389,26 +2408,41 @@
     margin-right: 30%; } }
 
 .App section {
-  padding-top: 5vh;
-  padding-bottom: 7vh; }
-
-@media (min-width: 550px) {
-  .App section {
-    padding-left: 3%;
-    padding-right: 3%; } }
+  margin-top: 12vh; }
 
 .App section .section-title {
   margin: 0; }
 
 .App section .section-content {
-  padding-top: 5vh; }
+  margin-top: 8vh; }
+
+.App section .intro-card {
+  padding-top: 8vh; }
+
+@media (min-width: 550px) {
+  .App section .intro-card {
+    padding-left: 3%;
+    padding-right: 3%; } }
+
+.App #intro {
+  margin-top: 0; }
 
 .App #intro p {
   text-align: justify;
-  margin: 0; }
+  margin: 0;
+  line-height: 2em; }
+
+.App #intro p span {
+  font-size: 1.5em;
+  padding-right: 0.5em; }
 
 .App #contacts p {
   margin: 0; }
+
+.App #contacts strong {
+  color: #2D3B20;
+  padding: 1em 0;
+  display: block; }
 
 .App #hobbies ul {
   list-style: none;
@@ -2447,34 +2481,44 @@
   flex-flow: column wrap;
   margin: 0 auto;
   position: relative;
-  /* Vertical line */ }
+  /* Vertical line when timeline is horizontal */ }
 
-@media (min-width: 400px) and (max-width: 900px) {
+@media (min-width: 400px) and (max-width: 800px) {
   .App #experience .timeline {
     width: 400px; } }
 
-@media (min-width: 900px) {
+@media (min-width: 800px) {
   .App #experience .timeline {
     width: 800px; } }
 
-.App #experience .timeline:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: calc(50% - 1.5px);
-  border-left: 3px solid #2D3B20; }
+@media (min-width: 800px) {
+  .App #experience .timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(50% - 1.5px);
+    border-left: 3px solid #2D3B20; } }
+
+.App #experience li:not(:last-child) .timeline-card {
+  margin-bottom: 2em; }
+
+@media (min-width: 800px) {
+  .App #experience li:not(:last-child) .timeline-card {
+    margin-bottom: 4em; } }
 
 .App #experience li {
   position: relative;
-  /* Icon */ }
+  /* Icon */
+  /* hover */ }
 
 .App #experience li .timeline-icon {
   width: 1em;
   height: 1em;
-  margin-left: -0.5em; }
+  margin-left: -0.5em;
+  display: none; }
 
-@media (min-width: 900px) {
+@media (min-width: 800px) {
   .App #experience li .timeline-icon {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -2484,18 +2528,21 @@
     background-color: #A6B19C;
     display: block; } }
 
+.App #experience li:hover .timeline-card-thumbnail {
+  -webkit-box-shadow: inset 40em 0 0 0 #2D3B20;
+  -moz-box-shadow: inset 40em 0 0 0 #2D3B20;
+  box-shadow: inset 40em 0 0 0 #2D3B20; }
+
 .App #experience li .timeline-card {
   /* Card Layout */
-  margin-top: -2em;
-  margin-bottom: 5em;
   width: 96vw;
   margin-left: -48vw;
   z-index: 2;
   background: url("/back/waves.png");
-  padding-top: 15px;
-  padding-bottom: 15px;
-  border: 1px solid #2D3B20;
-  /* Thumbnail */ }
+  padding-top: calc(25px - 12px);
+  padding-bottom: calc(25px - 12px);
+  /* Card content */
+  /* Card thumbnail */ }
 
 @media (min-width: 400px) {
   .App #experience li .timeline-card {
@@ -2505,8 +2552,9 @@
 .App #experience li .timeline-card * {
   text-align: justify; }
 
-@media (min-width: 900px) {
+@media (min-width: 800px) {
   .App #experience li .timeline-card {
+    margin-top: -2em;
     background: none;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -2521,7 +2569,11 @@
     text-align: left; } }
 
 .App #experience li .timeline-card .timeline-card-content {
-  margin: 0px 25px; }
+  margin: 0px 3%; }
+
+@media (min-width: 800px) {
+  .App #experience li .timeline-card .timeline-card-content {
+    margin: 0px 6%; } }
 
 .App #experience li .timeline-card .timeline-card-thumbnail {
   -webkit-transition: box-shadow 0.5s ease-in;
@@ -2539,10 +2591,13 @@
   margin-bottom: 1.2em;
   padding: 0.25em 1em 0.2em 1em; }
 
-.App #experience li:hover .timeline-card-thumbnail {
-  -webkit-box-shadow: inset 40em 0 0 0 #2D3B20;
-  -moz-box-shadow: inset 40em 0 0 0 #2D3B20;
-  box-shadow: inset 40em 0 0 0 #2D3B20; }
+.App #footer {
+  margin-top: 0px;
+  color: whitesmoke;
+  background-color: #171717; }
+
+.App #footer div {
+  padding: 0.5vh; }
 
 .transition {
   height: 60vh;

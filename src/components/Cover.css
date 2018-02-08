@@ -21,13 +21,6 @@
   display: inline-block;
   margin-bottom: 13vh; }
 
-.Cover .inner-content h1 {
-  font-size: 2.5em;
-  color: #21271a; }
-
-.Cover .inner-content h3 {
-  color: #21271a; }
-
 .Cover .triangles > div:nth-child(1) {
   right: 6.5vh;
   margin-top: 25px; }
@@ -41,17 +34,3 @@
 
 .Cover .triangles .base {
   border-color: #A6B19C; }
-
-.Cover .upperC {
-  border-color: #2D3B20;
-  border-top-width: 4px;
-  border-top-style: solid;
-  border-left-width: 4px;
-  border-left-style: solid;
-  border-bottom-width: 4px;
-  border-bottom-style: solid;
-  width: 36px;
-  height: 142px;
-  margin-left: 50px;
-  margin-top: -48px;
-  margin-right: 10px; }

@@ -7,24 +7,49 @@ $fa-font-path: "~font-awesome/fonts";
 
 @import "../node_modules/compass-mixins/lib/compass/_css3";
 
+body {
+  font-size: 12px; 
+}
+
+@media (min-width: 800px) {
+  body {
+    font-size: 14px; 
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    font-size: 16px; 
+  }
+}
+
+
 
 .App {
 
-  background: url('/back/waves.png');
+  background: url('/back/waves-2.png');
+
+  /* Text and Fonts */
 
   text-align: center;
-  line-height: 1.5em;
-
   font-family: 'Montserrat', sans-serif;
+  line-height: 1.5em;
+  
 
   h1 {
     font-family: 'Cabin Sketch';
+    font-size: 3em;
   }
 
   h2 {
     font-family: 'Cabin Sketch';
     font-weight: 100;
+    font-size: 2em;
     text-decoration: underline;
+  }
+
+  h1,h2,h3,h4,h5 {
+    color: $theme-darker-primary;
   }
 
   .Cover {
@@ -34,6 +59,8 @@ $fa-font-path: "~font-awesome/fonts";
     }
   }
   
+  /* Layout */
+
   .inner {
     @media (max-width: 650px) {
       margin-left: 5%; 
@@ -71,37 +98,59 @@ $fa-font-path: "~font-awesome/fonts";
     }
   }
 
-
-  $vertical-space: 5vh;
+  // Vertical space between sections
+  $vertical-space: 12vh;
+  // Vertical space between section title and content
+  $vspace-inside: 8vh;
 
   section {
-    padding-top: $vertical-space; 
-    padding-bottom: 7vh; 
-    @media (min-width: 550px) {
-      padding-left: 3%; 
-      padding-right: 3%; 
-    }
+    
+    margin-top: $vertical-space;
 
     .section-title {
       margin: 0;
     }
 
     .section-content {
-      padding-top: $vertical-space;
+      margin-top: $vspace-inside;
     }
 
+    .intro-card {
+      padding-top: $vspace-inside; 
+
+      @media (min-width: 550px) {
+        padding-left: 3%; 
+        padding-right: 3%; 
+      }
+
+    }
   }
-    
+   
+  /* Section styling */
+
   #intro {
+    margin-top: 0;
+
     p {
       text-align: justify;  
       margin: 0;
+      line-height: 2em;
+
+      span {
+        font-size: 1.5em;
+        padding-right: 0.5em;
+      }
     }
   }
 
   #contacts {
     p {
       margin: 0;
+    }
+    strong {
+      color: $theme-darker-secondary;
+      padding: 1em 0;
+      display: block;
     }
   }
 
@@ -132,8 +181,8 @@ $fa-font-path: "~font-awesome/fonts";
   #experience {
 
     $card_width: 400px;
-    $card_width_md: 40vw;
     $spacing: 25px;
+    $timelinebreak: 800px;
 
     /* Layout */
     * {
@@ -147,11 +196,12 @@ $fa-font-path: "~font-awesome/fonts";
       padding-right: 50%;
       width: 100%;
       
-      @media (min-width: 400px) and (max-width: 900px) {
+      // When screen is between a cardwidth the timeline breakpoint, set timeline width as a card width
+      @media (min-width: $card_width) and (max-width: $timelinebreak) {
         width: $card_width;
       }
-
-      @media (min-width: 900px) {
+      // When screen is big enough and timeline is right, set timeline width as 2*card width
+      @media (min-width: $timelinebreak) {
         width: 2*$card_width;
       }
 
@@ -160,65 +210,87 @@ $fa-font-path: "~font-awesome/fonts";
       margin: 0 auto;
       position: relative;
 
-      /* Vertical line */
-      &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: calc(50% - 1.5px);
-        border-left: 3px solid $theme-darker-secondary;
+      /* Vertical line when timeline is horizontal */
+      @media (min-width: $timelinebreak) {      
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: calc(50% - 1.5px);
+          border-left: 3px solid $theme-darker-secondary;
+        }
       }
 
     }
 
-    
+    li:not(:last-child) {
+      .timeline-card {
+        margin-bottom: 2em;
+      }
+      @media (min-width: $timelinebreak) {
+        .timeline-card {
+          margin-bottom: 4em;
+        }
+      }
+    }
+
     li {
 
       position: relative;
 
       /* Icon */
       .timeline-icon {
-        
-        @media (min-width: 900px) {
+        width: 1em;
+        height: 1em;
+        margin-left: -0.5em;
+        display: none;
+
+        @media (min-width: $timelinebreak) {
 
           @include rotate (45deg);  
           background-color: $theme-lighter;
           display: block;        
           
         }
+      }
 
-        width: 1em;
-        height: 1em;
-        margin-left: -0.5em;
-        
+      /* hover */
+      &:hover {
+        .timeline-card-thumbnail {
+          @include box-shadow(inset 40em 0 0 0 $theme-darker-secondary);
+        }
       }
 
       .timeline-card {
 
         /* Card Layout */
-        margin-top: -2em;
-        margin-bottom: 5em;
-        
+      
+        // By default, card takes (almost) all the screen
         width: 96vw;
         margin-left: -48vw;
 
-        @media (min-width: 400px){
+        // As soon as card width fits the screen, set its width and margin
+        @media (min-width: $card_width){
           width: $card_width;
           margin-left: -($card_width/2);
         }
 
+        // By default, display regular card with padding justified text
+        z-index: 2;
+        background: url('/back/waves.png');
+        padding-top: calc(#{$spacing} - 12px);
+        padding-bottom: calc(#{$spacing} - 12px);
+        //border: 1px solid $theme-darker-secondary;
+        //border-radius: 3px;
+        
         * {
           text-align: justify;
         }
 
-        z-index: 2;
-        background: url('/back/waves.png');
-        padding-top: 15px;
-        padding-bottom: 15px;
-        border: 1px solid $theme-darker-secondary;
-        
-        @media (min-width: 900px) {
+        // When timeline is large, margin top to align with icon and align odd and even cards to left and right sides
+        @media (min-width: $timelinebreak) {
+          margin-top: -2em;   
 
           background: none;
           padding-top: 0px;
@@ -226,8 +298,7 @@ $fa-font-path: "~font-awesome/fonts";
           border: none;
 
           &.odd {
-            margin-left: -$card_width;
-            
+            margin-left: -$card_width;     
             * {
               text-align: right;
             }
@@ -241,11 +312,15 @@ $fa-font-path: "~font-awesome/fonts";
           }
         }
 
+        /* Card content */
         .timeline-card-content {
-          margin: 0px $spacing;
+          margin: 0px 3%;
+          @media (min-width: $timelinebreak) {
+            margin: 0px 6%;
+          }
         }
 
-        /* Thumbnail */
+        /* Card thumbnail */
         .timeline-card-thumbnail {
           @include transition(box-shadow 0.5s ease-in 0.1s);
           color: white;
@@ -259,13 +334,16 @@ $fa-font-path: "~font-awesome/fonts";
         }
 
       }
-      
-      &:hover {
-              
-        .timeline-card-thumbnail {
-          @include box-shadow(inset 40em 0 0 0 $theme-darker-secondary);
-        }
-      }
+    
+    }
+  }
+
+  #footer {
+    margin-top: 0px;
+    color: $theme-basic-white;
+    background-color: $theme-basic-black;
+    div {
+      padding: 0.5vh;
     }
   }
 
