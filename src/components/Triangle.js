@@ -87,7 +87,6 @@ export default class Triangle extends Component {
             },
             side_style,
         );
-        console.log(base_style);
 
         var wrapping_style = {
             width: (2*b)+units, 
