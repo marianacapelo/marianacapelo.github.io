@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Cover from './components/Cover';
 
@@ -12,8 +11,8 @@ class App extends Component {
         
         <div className="transition"></div>
 
-        <section id="intro" class="inner">
-          <div class="intro-card">
+        <section id="intro" className="inner">
+          <div className="intro-card">
             <p>
               <span>Hi!</span> My name is Mariana Capelo, I am 25 years old and I love programming.
               I am currently finishing my Masters Degree in Software Engineering at University of Minho and currently looking for a new challenge.
@@ -21,9 +20,9 @@ class App extends Component {
           </div>
         </section>
 
-        <section id="hobbies" class="inner">
-          <h2 class="section-title">What I love</h2>
-          <div class="section-content">
+        <section id="hobbies" className="inner">
+          <h2 className="section-title">What I love</h2>
+          <div className="section-content">
             <ul>
               <li>Problem solving</li>
               <li>Our cats</li>
@@ -34,14 +33,14 @@ class App extends Component {
         </section>
 
         <section id="experience">
-          <h2 class="section-title">What I've done</h2>
-          <div class="section-content">
-            <ul class="timeline">
+          <h2 className="section-title">What I've done</h2>
+          <div className="section-content">
+            <ul className="timeline">
               <li>
-                <label class="timeline-icon"></label>
-                <div class="timeline-card even">
-                  <p class="timeline-card-thumbnail">September 2016 - September 2017</p>
-                  <div class="timeline-card-content">
+                <label className="timeline-icon"></label>
+                <div className="timeline-card even">
+                  <p className="timeline-card-thumbnail">September 2016 - September 2017</p>
+                  <div className="timeline-card-content">
                     <h3>Software Developer @ Bsolus</h3>
                     <h4>Beevo Project - Core Team</h4>
                     <p>Team leader for core development in Beevo project</p>
@@ -49,10 +48,10 @@ class App extends Component {
                 </div>
               </li>
               <li>
-                <label class="timeline-icon"></label>
-                <div class="timeline-card odd">
-                  <p class="timeline-card-thumbnail">September 2014 - September 2016</p>
-                  <div class="timeline-card-content">
+                <label className="timeline-icon"></label>
+                <div className="timeline-card odd">
+                  <p className="timeline-card-thumbnail">September 2014 - September 2016</p>
+                  <div className="timeline-card-content">
                     <h3>Software Developer @ Bsolus</h3>
                     <h4>Beevo Project</h4>
                     <p>Development and architecture of a multi client web platform, using PHP and Javascript</p>
@@ -60,10 +59,10 @@ class App extends Component {
                 </div>
               </li>
               <li>
-                <label class="timeline-icon"></label>
-                <div class="timeline-card even">
-                  <p class="timeline-card-thumbnail">September 2014 - Present</p>
-                  <div class="timeline-card-content">
+                <label className="timeline-icon"></label>
+                <div className="timeline-card even">
+                  <p className="timeline-card-thumbnail">September 2014 - Present</p>
+                  <div className="timeline-card-content">
                     <h3>MSc in Software Engineering</h3>
                     <h4>Univeristy of Minho</h4>
                     <p>
@@ -74,10 +73,10 @@ class App extends Component {
                 </div>
               </li>
               <li>
-                <label class="timeline-icon"></label>
-                <div class="timeline-card odd">
-                  <p class="timeline-card-thumbnail">September 2011 - June 2014</p>
-                  <div class="timeline-card-content">
+                <label className="timeline-icon"></label>
+                <div className="timeline-card odd">
+                  <p className="timeline-card-thumbnail">September 2011 - June 2014</p>
+                  <div className="timeline-card-content">
                     <h3>BSc in Software Engineering</h3>
                     <h4>Univeristy of Minho</h4>
                     <p>
@@ -90,9 +89,9 @@ class App extends Component {
           </div>
         </section>
 
-        <section id="contacts" class="inner">
-          <h2 class="section-title">Get in touch</h2>
-          <div class="section-content">
+        <section id="contacts" className="inner">
+          <h2 className="section-title">Get in touch</h2>
+          <div className="section-content">
             <p>
               I would love to talk!
             </p>
@@ -103,7 +102,7 @@ class App extends Component {
         </section>
         
         <section id="footer">
-          <div class="section-content">
+          <div className="section-content">
             Mariana Capelo
           </div>
         </section>
