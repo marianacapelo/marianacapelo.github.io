@@ -1,14 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Julius+Sans+One");
-@import url("https://fonts.googleapis.com/css?family=Poiret+One");
 @import url("https://fonts.googleapis.com/css?family=Cabin+Sketch");
-@import url("https://fonts.googleapis.com/css?family=Bungee+Hairline");
-@import url("https://fonts.googleapis.com/css?family=Mandali|Plaster");
-@import url("https://fonts.googleapis.com/css?family=Cinzel+Decorative|Flamenco|Fredericka+the+Great|Kranky|Mandali|Megrim|Overlock+SC|Plaster|Pompiere|Raleway+Dots|Trochut");
-@import url("https://fonts.googleapis.com/css?family=Chathura|Overpass+Mono|Syncopate");
-@import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great|Reenie+Beanie");
-@import url("https://fonts.googleapis.com/css?family=Gruppo|Love+Ya+Like+A+Sister|Pompiere");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:extra-light");
 /*
  * Color variables
@@ -2350,6 +2341,18 @@
   line-height: 1.5em;
   font-family: 'Montserrat', sans-serif; }
 
+.App h1 {
+  font-family: 'Cabin Sketch'; }
+
+.App h2 {
+  font-family: 'Cabin Sketch';
+  font-weight: 100;
+  text-decoration: underline; }
+
+.App .Cover h2 {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none; }
+
 @media (max-width: 650px) {
   .App .inner {
     margin-left: 5%;
@@ -2540,32 +2543,6 @@
   -webkit-box-shadow: inset 40em 0 0 0 #2D3B20;
   -moz-box-shadow: inset 40em 0 0 0 #2D3B20;
   box-shadow: inset 40em 0 0 0 #2D3B20; }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
-
-h1 {
-  font-family: 'Fredericka the Great', cursive;
-  font-family: 'Raleway Dots', cursive;
-  font-family: 'Syncopate', sans-serif;
-  font-family: 'Chathura', sans-serif;
-  font-family: 'Gruppo', cursive;
-  font-family: 'Julius Sans One', sans-serif;
-  font-family: 'Cabin Sketch'; }
-
-h2 {
-  font-family: 'Cabin Sketch';
-  font-weight: 100;
-  text-decoration: underline; }
-
-.Cover h2 {
-  font-family: 'Reenie Beanie', cursive;
-  font-family: 'Raleway Dots', cursive;
-  font-family: 'Montserrat', sans-serif;
-  text-decoration: none; }
 
 .transition {
   height: 60vh;
