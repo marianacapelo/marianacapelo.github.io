@@ -1,0 +1,20 @@
+/*
+ * Color variables
+ */
+$theme-darker-primary: #21271a; // #2D3B20;
+$theme-darker-secondary: #2D3B20; // #4D5C3E;
+
+$theme-lighter: #A6B19C; //#787e73;
+
+$theme-basic-black: #171717;
+$theme-basic-white: whitesmoke;
+
+
+
+@mixin rotate($angle) {
+  transform: rotate($angle);
+  -webkit-transform: rotate($angle);
+  -moz-transform: rotate($angle);
+  -o-transform: rotate($angle);
+  -ms-transform: rotate($angle);
+}
