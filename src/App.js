@@ -19,7 +19,7 @@ class App extends Component {
                 My name is Mariana Capelo, I am 25 years old and I love programming.
               </p>
               <p>
-                I am a Software Engineer from Portugal, currently finishing my Masters Degree in Software Engineering at University of Minho and looking for a new challenge.
+                I am a Software Engineer from Portugal, currently finishing my Masters Degree at University of Minho and looking for a new challenge.
               </p>
             </div>
           </div>
