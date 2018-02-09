@@ -221,7 +221,7 @@ body {
 
 @media (min-width: 800px) {
   .App #experience li .timeline-card {
-    margin-top: -2em;
+    margin-top: -1.5em;
     background: none;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -249,12 +249,13 @@ body {
   -o-transition: box-shadow 0.5s ease-in 0.1s;
   transition: box-shadow 0.5s ease-in 0.1s;
   color: white;
-  font-size: 0.75em;
+  font-size: 1em;
   background-color: #A6B19C;
   -webkit-box-shadow: inset 0 0 0 0em #ef795a;
   -moz-box-shadow: inset 0 0 0 0em #ef795a;
   box-shadow: inset 0 0 0 0em #ef795a;
   display: inline-block;
+  margin-top: 0;
   margin-bottom: 1.2em;
   padding: 0.25em 1em 0.2em 1em; }
 

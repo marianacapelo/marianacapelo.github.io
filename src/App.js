@@ -13,10 +13,15 @@ class App extends Component {
 
         <section id="intro" className="inner">
           <div className="intro-card">
-            <p>
-              <span>Hi!</span> My name is Mariana Capelo, I am 25 years old and I love programming.
-              I am currently finishing my Masters Degree in Software Engineering at University of Minho and currently looking for a new challenge.
-            </p>
+            <h2 className="section-title">Hi!</h2>
+            <div className="section-content">
+              <p>
+                My name is Mariana Capelo, I am 25 years old and I love programming.
+              </p>
+              <p>
+                I am a Software Engineer from Portugal, currently finishing my Masters Degree in Software Engineering at University of Minho and looking for a new challenge.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -96,7 +101,7 @@ class App extends Component {
               I would love to talk!
             </p>
             <strong>
-              mabcapelo@gmail.com
+              <a href="mailto:mabcapelo@gmail.com">mabcapelo@gmail.com</a>
             </strong>
           </div>
         </section>

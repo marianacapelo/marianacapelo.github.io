@@ -12,7 +12,8 @@
   align-items: center; }
 
 .Cover * {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 5px; }
 
 .Cover .inner-content .aligned {
   width: 100%; }

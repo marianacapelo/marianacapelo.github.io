@@ -285,7 +285,7 @@ body {
 
         // When timeline is large, margin top to align with icon and align odd and even cards to left and right sides
         @media (min-width: $timelinebreak) {
-          margin-top: -2em;   
+          margin-top: -1.5em;   
 
           background: none;
           padding-top: 0px;
@@ -319,11 +319,13 @@ body {
         .timeline-card-thumbnail {
           @include transition(box-shadow 0.5s ease-in 0.1s);
           color: white;
-          font-size: 0.75em;
+          font-size: 1em;
           
           background-color: $theme-lighter;
           @include box-shadow(inset 0 0 0 0em #ef795a);
           display: inline-block;
+          
+          margin-top: 0;
           margin-bottom: 1.2em;
           padding: 0.25em 1em 0.2em 1em;
         }
