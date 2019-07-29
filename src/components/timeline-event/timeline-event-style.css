@@ -79,6 +79,13 @@ li.timeline-event .timeline-card .timeline-card-content {
     margin-left: 6%;
     margin-right: 6%; } }
 
+li.timeline-event .timeline-card .timeline-card-content h4 {
+  display: inline-flex; }
+
+li.timeline-event .timeline-card .timeline-card-content h4 span {
+  margin: 0 0.75em;
+  font-size: 0.75em; }
+
 li.timeline-event .timeline-card .timeline-card-thumbnail {
   -webkit-transition: box-shadow 0.5s ease-in;
   -webkit-transition-delay: 0.1s;

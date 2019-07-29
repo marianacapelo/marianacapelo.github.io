@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import './timeline-event-style.css'
 
 const TimelineEvent = ({
+  company,
   description,
   side,
   subtitle,
@@ -14,7 +15,7 @@ const TimelineEvent = ({
         <p className='timeline-card-thumbnail'>{time}</p>
         <div className='timeline-card-content'>
           <h3>{title}</h3>
-          <h4>{subtitle}</h4>
+          <h4>{subtitle}{company ? (<Fragment><span>@</span>{company}</Fragment>) : null}</h4>
           <p>{description}</p>
         </div>
       </div>

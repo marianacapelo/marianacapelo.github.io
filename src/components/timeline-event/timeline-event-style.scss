@@ -98,6 +98,15 @@ li.timeline-event {
         margin-left: 6%;
         margin-right: 6%;
       }
+
+      h4 {
+        display: inline-flex;
+
+        span {
+          margin: 0 0.75em;
+          font-size: 0.75em;
+        }
+      }
     }
 
     /* Card thumbnail */

@@ -48,14 +48,16 @@ class App extends Component {
             <TimelineEvent
               side={'even'}
               time={'September 2016 - September 2017'}
-              title={'Software Developer @ Bsolus'}
+              title={'Software Developer'}
+              company={'Bsolus'}
               subtitle={'Beevo Project - Core Team'}
               description={'Team leader for core development in Beevo project.'}
             />
             <TimelineEvent
               side={'odd'}
               time={'September 2014 - September 2016'}
-              title={'Software Developer @ Bsolus'}
+              title={'Software Developer'}
+              company={'Bsolus'}
               subtitle={'Beevo Project'}
               description={'Development and architecture of a multi client web platform, using PHP and Javascript.'}
             />
