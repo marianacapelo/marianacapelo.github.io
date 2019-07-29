@@ -18,10 +18,11 @@ class App extends Component {
         <Section id="intro" className="inner" title='Hi!'>
           <IntroCard>
             <p>
-              My name is Mariana Capelo, I am 25 years old and I love programming.
+              My name is Mariana Capelo, and I love programming.
             </p>
             <p>
-              I am a Software Engineer from Portugal, currently finishing my Masters Degree at University of Minho and looking for a new challenge.
+              I am 26 years old and live in Braga, Portugal. I like puzzles and learning new things.
+              For the last few years I have been working in web and mobile development, trying to improve my skills and  taking the time to enjoy this amazing journey.
             </p>
           </IntroCard>
         </Section>
@@ -38,18 +39,25 @@ class App extends Component {
         <Section id='experience' title="What I've done">
           <Timeline>
             <TimelineEvent
+              side={'odd'}
+              time={'June 2018 - Present day'}
+              title={'Remote Software Developer'}
+              subtitle={'Freelancing'}
+              description={'Integrated a remote and distributed network of developers, delivering several web and mobile projects.'}
+            />
+            <TimelineEvent
               side={'even'}
               time={'September 2016 - September 2017'}
               title={'Software Developer @ Bsolus'}
               subtitle={'Beevo Project - Core Team'}
-              description={'Team leader for core development in Beevo project'}
+              description={'Team leader for core development in Beevo project.'}
             />
             <TimelineEvent
               side={'odd'}
               time={'September 2014 - September 2016'}
               title={'Software Developer @ Bsolus'}
               subtitle={'Beevo Project'}
-              description={'Development and architecture of a multi client web platform, using PHP and Javascript'}
+              description={'Development and architecture of a multi client web platform, using PHP and Javascript.'}
             />
             <TimelineEvent
               side={'even'}
