@@ -1,0 +1,27 @@
+@import "../../style/colors.scss";
+
+.transition {
+  height: 60vh;
+  width: 0;
+  border-left: 4px solid $theme-lighter;
+  margin-left: calc(50% - 2px);
+  border-image: linear-gradient(
+    to bottom,
+    rgba($theme-lighter, 0),
+    $theme-lighter 25%,
+    $theme-lighter 65%,
+    $theme-lighter
+  ) 1 100%;
+
+  @media (min-height: 400px) and (max-height: 500px) {
+    margin-top: -5vh;
+  }
+
+  @media (min-height: 500px) and (max-height: 900px) {
+    margin-top: -10vh;
+  }
+
+  @media (min-height: 900px) {
+    margin-top: -20vh;
+  }
+}

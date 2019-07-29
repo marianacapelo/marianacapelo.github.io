@@ -1,0 +1,44 @@
+@import "../../style/colors.scss";
+@import "../../../node_modules/compass-mixins/lib/compass/_css3";
+
+$card_width: 400px;
+$spacing: 25px;
+$timelinebreak: 800px;
+
+.timeline {
+  &, * {
+    @include box-sizing(border-box);
+  }
+
+  list-style: none;
+  padding-top: 0.5em;
+  padding-left: 50%;
+  padding-right: 50%;
+  display: flex;
+  flex-flow: column wrap;
+  margin: 0 auto;
+  padding-bottom: 2em;
+  position: relative;
+  width: 100%;
+
+  // When screen is between a cardwidth the timeline breakpoint, set timeline width as a card width
+  @media (min-width: $card_width) and (max-width: $timelinebreak) {
+    width: $card_width;
+  }
+  // When screen is big enough and timeline is right, set timeline width as 2*card width
+  @media (min-width: $timelinebreak) {
+    width: 2*$card_width;
+  }
+
+  /* Vertical line when timeline is horizontal */
+  @media (min-width: $timelinebreak) {      
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0.5em;
+      bottom: 0;
+      left: calc(50% - 1.5px);
+      border-left: 2px solid $theme-darker-secondary;
+    }
+  }
+}

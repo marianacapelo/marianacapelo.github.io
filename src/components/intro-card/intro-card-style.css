@@ -1,0 +1,15 @@
+/*
+ * Color variables
+ */
+@media (min-width: 550px) {
+  .intro-card {
+    padding-left: 3%;
+    padding-right: 3%; } }
+
+.intro-card p {
+  text-align: justify;
+  line-height: 2em; }
+
+.intro-card p span {
+  font-size: 1.5em;
+  padding-right: 0.5em; }

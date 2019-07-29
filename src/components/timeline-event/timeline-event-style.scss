@@ -1,0 +1,118 @@
+@import "../../style/colors.scss";
+@import "../../../node_modules/compass-mixins/lib/compass/_css3";
+
+$card_width: 400px;
+$spacing: 25px;
+$timelinebreak: 800px;
+
+li.timeline-event {
+  position: relative;
+
+  &:not(:last-child) {
+    .timeline-card {
+      margin-bottom: 2em;
+    }
+    @media (min-width: $timelinebreak) {
+      .timeline-card {
+        margin-bottom: 4em;
+      }
+    }
+  }
+  
+  /* Icon */
+  .timeline-icon {
+    width: 1em;
+    height: 1em;
+    margin-left: -0.5em;
+    display: none;
+
+    @media (min-width: $timelinebreak) {
+      @include rotate (45deg);  
+      background-color: $theme-lighter;
+      display: block;
+    }
+  }
+
+  /* hover */
+  &:hover {
+    .timeline-card-thumbnail {
+      @include box-shadow(inset 40em 0 0 0 $theme-darker-secondary);
+    }
+  }
+
+  .timeline-card {
+
+    /* Card Layout */
+  
+    // By default, card takes (almost) all the screen
+    width: 96vw;
+    margin-left: -48vw;
+
+    // As soon as card width fits the screen, set its width and margin
+    @media (min-width: $card_width){
+      width: $card_width;
+      margin-left: -($card_width/2);
+    }
+
+    // By default, display regular card with padding justified text
+    z-index: 2;
+    background: url('/back/waves-2.png');
+    padding-top: calc(#{$spacing} - 12px);
+    padding-bottom: calc(#{$spacing} - 12px);
+    
+    * {
+      text-align: justify;
+    }
+
+    // When timeline is large, margin top to align with icon and align odd and even cards to left and right sides
+    @media (min-width: $timelinebreak) {
+      margin-top: -1.5em;   
+
+      background: none;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      border: none;
+
+      &.odd {
+        margin-left: -$card_width;     
+        * {
+          text-align: right;
+        }
+      }
+      
+      &.even {
+        margin-left: 0px;
+        * {
+          text-align: left;
+        }
+      }
+    }
+
+    /* Card content */
+    .timeline-card-content {
+      margin-top: 1.5em;
+      margin-left: 3%;
+      margin-right: 3%;
+
+      @media (min-width: $timelinebreak) {
+        margin-left: 6%;
+        margin-right: 6%;
+      }
+    }
+
+    /* Card thumbnail */
+    .timeline-card-thumbnail {
+      @include transition(box-shadow 0.5s ease-in 0.1s);
+      color: white;
+      font-size: 1em;
+      
+      background-color: $theme-lighter;
+      @include box-shadow(inset 0 0 0 0em #ef795a);
+      display: inline-block;
+      
+      margin-top: 0;
+      margin-bottom: 0.5em;
+      padding: 0.25em 1em 0.2em 1em;
+    }
+  }
+}

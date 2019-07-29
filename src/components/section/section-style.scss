@@ -1,0 +1,18 @@
+@import "../../style/colors.scss";
+
+// Vertical space between sections
+$vertical-space: 12vh;
+// Vertical space between section title and content
+$vspace-inside: 8vh;
+
+section {
+  margin-top: $vertical-space;
+
+  .section-title {
+    margin: 0;
+  }
+
+  .section-content {
+    margin-top: $vspace-inside;
+  }
+}

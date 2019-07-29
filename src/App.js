@@ -1,116 +1,84 @@
-import React, { Component } from 'react';
-import './App.css';
-import Cover from './components/cover';
+import React, { Component } from 'react'
+import './App.css'
+import Section from './components/section'
+import Cover from './components/cover'
+import Footer from './components/footer'
+import IntroCard from './components/intro-card'
+import Timeline from './components/timeline'
+import TimelineEvent from './components/timeline-event'
+import Hobbies from './components/hobbies'
+import Hobbie from './components/hobbie'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-
         <Cover name={'Mariana Capelo'} profession={'Software Engineer'} />
-        <div className="transition"></div>
 
-        <section id="intro" className="inner">
-          <div className="intro-card">
-            <h2 className="section-title">Hi!</h2>
-            <div className="section-content">
-              <p>
-                My name is Mariana Capelo, I am 25 years old and I love programming.
-              </p>
-              <p>
-                I am a Software Engineer from Portugal, currently finishing my Masters Degree at University of Minho and looking for a new challenge.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section id="hobbies" className="inner">
-          <h2 className="section-title">What I love</h2>
-          <div className="section-content">
-            <ul>
-              <li>Problem solving</li>
-              <li>Our cats</li>
-              <li>Crafting</li>
-              <li>Snow</li>
-            </ul>
-          </div>
-        </section>
-
-        <section id="experience">
-          <h2 className="section-title">What I've done</h2>
-          <div className="section-content">
-            <ul className="timeline">
-              <li>
-                <label className="timeline-icon"></label>
-                <div className="timeline-card even">
-                  <p className="timeline-card-thumbnail">September 2016 - September 2017</p>
-                  <div className="timeline-card-content">
-                    <h3>Software Developer @ Bsolus</h3>
-                    <h4>Beevo Project - Core Team</h4>
-                    <p>Team leader for core development in Beevo project</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <label className="timeline-icon"></label>
-                <div className="timeline-card odd">
-                  <p className="timeline-card-thumbnail">September 2014 - September 2016</p>
-                  <div className="timeline-card-content">
-                    <h3>Software Developer @ Bsolus</h3>
-                    <h4>Beevo Project</h4>
-                    <p>Development and architecture of a multi client web platform, using PHP and Javascript</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <label className="timeline-icon"></label>
-                <div className="timeline-card even">
-                  <p className="timeline-card-thumbnail">September 2014 - Present</p>
-                  <div className="timeline-card-content">
-                    <h3>MSc in Software Engineering</h3>
-                    <h4>Univeristy of Minho</h4>
-                    <p>
-                      Masters Degree specialized in Formal Methods in Software Engineering and Business Intelligence.
-                      Dissertation in progress.
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <label className="timeline-icon"></label>
-                <div className="timeline-card odd">
-                  <p className="timeline-card-thumbnail">September 2011 - June 2014</p>
-                  <div className="timeline-card-content">
-                    <h3>BSc in Software Engineering</h3>
-                    <h4>Univeristy of Minho</h4>
-                    <p>
-                      Bachelors Degree lasted three years and included lessons in functional, imperative, object-oriented and logical programming paradigms.
-                    </p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section id="contacts" className="inner">
-          <h2 className="section-title">Get in touch</h2>
-          <div className="section-content">
+        <Section id="intro" className="inner" title='Hi!'>
+          <IntroCard>
             <p>
-              I would love to talk!
+              My name is Mariana Capelo, I am 25 years old and I love programming.
             </p>
-            <strong>
-              <a href="mailto:mabcapelo@gmail.com">mabcapelo@gmail.com</a>
-            </strong>
-          </div>
-        </section>
+            <p>
+              I am a Software Engineer from Portugal, currently finishing my Masters Degree at University of Minho and looking for a new challenge.
+            </p>
+          </IntroCard>
+        </Section>
 
-        <section id="footer">
-          <div className="section-content">
-            Mariana Capelo
-          </div>
-        </section>
-      </div>
+        <Section id='hobbies' className="inner" title='What I love'>
+          <Hobbies>
+            <Hobbie name={'Problem solving'} />
+            <Hobbie name={'Our cats'} />
+            <Hobbie name={'Crafting'} />
+            <Hobbie name={'Snow'} />
+          </Hobbies>
+        </Section>
+
+        <Section id='experience' title="What I've done">
+          <Timeline>
+            <TimelineEvent
+              side={'even'}
+              time={'September 2016 - September 2017'}
+              title={'Software Developer @ Bsolus'}
+              subtitle={'Beevo Project - Core Team'}
+              description={'Team leader for core development in Beevo project'}
+            />
+            <TimelineEvent
+              side={'odd'}
+              time={'September 2014 - September 2016'}
+              title={'Software Developer @ Bsolus'}
+              subtitle={'Beevo Project'}
+              description={'Development and architecture of a multi client web platform, using PHP and Javascript'}
+            />
+            <TimelineEvent
+              side={'even'}
+              time={'September 2014 - September 2018'}
+              title={'MSc in Software Engineering'}
+              subtitle={'Univeristy of Minho'}
+              description={'Masters Degree specialized in Formal Methods in Software Engineering and Business Intelligence.'}
+            />
+            <TimelineEvent
+              side={'odd'}
+              time={'September 2011 - June 2014'}
+              title={'BSc in Software Engineering'}
+              subtitle={'Univeristy of Minho'}
+              description={'Bachelors Degree lasted three years and included lessons in functional, imperative, object-oriented and logical programming paradigms.'}
+            />
+          </Timeline>
+        </Section>
+
+        <Section id="contacts" className="inner" title='Get in touch'>
+          <p>
+            I would love to talk!
+          </p>
+          <strong>
+            <a href="mailto:mabcapelo@gmail.com">mabcapelo@gmail.com</a>
+          </strong>
+        </Section>
+
+        <Footer>Mariana Capelo</Footer>
+      </div >
     );
   }
 }
