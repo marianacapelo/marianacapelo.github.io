@@ -1,0 +1,13 @@
+.hobbie {
+  float: left;
+  
+  &:not(:last-child):after {
+    padding-left: 22px;
+    padding-right: 22px;
+    content: "\F08A";
+    font-family: FontAwesome;
+    font-size: 0.5em;
+    line-height: 1em;
+    padding-bottom: 0.5em;
+  }
+}

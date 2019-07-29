@@ -1,0 +1,10 @@
+@import '../../style/trig.scss';
+@import '../../style/colors.scss';
+
+.triangle {
+    position: relative;
+    display: flex;
+    .side {
+        position: absolute;
+    }
+}

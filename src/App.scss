@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch|Montserrat:extra-light');
+
+@import "./style/colors.scss";
+
+@import "../node_modules/compass-mixins/lib/compass/_css3";
+
+body {
+  font-size: 12px; 
+  color: $theme-basic-black;
+}
+
+@media (min-width: 800px) {
+  body {
+    font-size: 14px; 
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    font-size: 16px; 
+  }
+}
+
+.App {
+
+  background: url('/back/waves-2.png');
+
+  /* Text and Fonts */
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.75em;  
+
+  h1 {
+    font-family: 'Cabin Sketch';
+    font-size: 3em;
+    line-height: 1em;
+  }
+
+  h2 {
+    font-family: 'Cabin Sketch';
+    font-weight: 100;
+    font-size: 2em;
+  }
+
+  h1, h2, h3, h4, h5 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: $theme-darker-primary;
+  }
+
+  strong {
+    color: $theme-darker-secondary;
+    padding: 1em 0;
+    display: block;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+    transition: font-weight, color 0.5s;
+  }
+
+  a:hover {
+    color: $theme-lighter;
+    font-weight: bolder;
+  }
+
+  /* Layout */
+  .inner {
+    @media (max-width: 650px) {
+      margin-left: 5%; 
+      margin-right: 5%; 
+    }
+
+    @media (min-width: 650px) and (max-width: 800px) {
+      margin-left: 10%; 
+      margin-right: 10%; 
+    }
+
+    @media (min-width: 800px) and (max-width: 900px) {
+      margin-left: 15%; 
+      margin-right: 15%; 
+    }
+  
+    @media (min-width: 900px) and (max-width: 1000px) {
+      margin-left: 22%; 
+      margin-right: 22%; 
+    }
+
+    @media (min-width: 1000px) and (max-width: 1100px) {
+      margin-left: 25%; 
+      margin-right: 25%; 
+    }
+
+    @media (min-width: 1100px) and (max-width: 1600px){
+      margin-left: 28%; 
+      margin-right: 28%; 
+    }
+
+    @media (min-width: 1600px){
+      margin-left: 30%; 
+      margin-right: 30%; 
+    }
+  }
+
+  #intro {
+    margin-top: 8vh;
+  }
+}

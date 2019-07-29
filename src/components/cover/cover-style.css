@@ -1,0 +1,34 @@
+/*
+ * Color variables
+ */
+.Cover {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.Cover * {
+  text-transform: uppercase;
+  letter-spacing: 5px; }
+
+.Cover .inner-content .aligned {
+  width: 100%; }
+
+.Cover .inner-content .aligned > div {
+  display: inline-block;
+  margin-bottom: 13vh; }
+
+.Cover .triangles > div:nth-child(1) {
+  right: 6.5vh;
+  margin-top: 25px; }
+
+.Cover .triangles > div:nth-child(2) {
+  left: -2.5vh; }
+
+.Cover .triangles .left,
+.Cover .triangles .right {
+  border-color: #2D3B20; }
+
+.Cover .triangles .base {
+  border-color: #A6B19C; }

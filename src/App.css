@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin+Sketch|Montserrat:extra-light");
+/*
+ * Color variables
+ */
+body {
+  font-size: 12px;
+  color: #171717; }
+
+@media (min-width: 800px) {
+  body {
+    font-size: 14px; } }
+
+@media (min-width: 1000px) {
+  body {
+    font-size: 16px; } }
+
+.App {
+  background: url("/back/waves-2.png");
+  /* Text and Fonts */
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.75em;
+  /* Layout */ }
+
+.App h1 {
+  font-family: 'Cabin Sketch';
+  font-size: 3em;
+  line-height: 1em; }
+
+.App h2 {
+  font-family: 'Cabin Sketch';
+  font-weight: 100;
+  font-size: 2em; }
+
+.App h1, .App h2, .App h3, .App h4, .App h5 {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  color: #21271a; }
+
+.App strong {
+  color: #2D3B20;
+  padding: 1em 0;
+  display: block; }
+
+.App p {
+  margin: 0; }
+
+.App a {
+  color: inherit;
+  text-decoration: inherit;
+  transition: font-weight, color 0.5s; }
+
+.App a:hover {
+  color: #A6B19C;
+  font-weight: bolder; }
+
+@media (max-width: 650px) {
+  .App .inner {
+    margin-left: 5%;
+    margin-right: 5%; } }
+
+@media (min-width: 650px) and (max-width: 800px) {
+  .App .inner {
+    margin-left: 10%;
+    margin-right: 10%; } }
+
+@media (min-width: 800px) and (max-width: 900px) {
+  .App .inner {
+    margin-left: 15%;
+    margin-right: 15%; } }
+
+@media (min-width: 900px) and (max-width: 1000px) {
+  .App .inner {
+    margin-left: 22%;
+    margin-right: 22%; } }
+
+@media (min-width: 1000px) and (max-width: 1100px) {
+  .App .inner {
+    margin-left: 25%;
+    margin-right: 25%; } }
+
+@media (min-width: 1100px) and (max-width: 1600px) {
+  .App .inner {
+    margin-left: 28%;
+    margin-right: 28%; } }
+
+@media (min-width: 1600px) {
+  .App .inner {
+    margin-left: 30%;
+    margin-right: 30%; } }
+
+.App #intro {
+  margin-top: 8vh; }
