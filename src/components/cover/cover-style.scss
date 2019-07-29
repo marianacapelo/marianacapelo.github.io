@@ -2,7 +2,7 @@
 
 .Cover { 
   height: 90vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;  
@@ -10,7 +10,6 @@
   * {
     text-transform: uppercase;
     letter-spacing: 5px;
-    
   }
 
   .inner-content {
