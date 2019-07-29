@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import Cover from './components/Cover';
+import Cover from './components/cover';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
 
-        <Cover />
-        
+        <Cover name={'Mariana Capelo'} profession={'Software Engineer'} />
         <div className="transition"></div>
 
         <section id="intro" className="inner">
@@ -72,7 +71,7 @@ class App extends Component {
                     <h4>Univeristy of Minho</h4>
                     <p>
                       Masters Degree specialized in Formal Methods in Software Engineering and Business Intelligence.
-                      Dissertation in progress.  
+                      Dissertation in progress.
                     </p>
                   </div>
                 </div>
@@ -90,7 +89,7 @@ class App extends Component {
                   </div>
                 </div>
               </li>
-            </ul>  
+            </ul>
           </div>
         </section>
 
@@ -105,7 +104,7 @@ class App extends Component {
             </strong>
           </div>
         </section>
-        
+
         <section id="footer">
           <div className="section-content">
             Mariana Capelo
