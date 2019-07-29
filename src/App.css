@@ -3,7 +3,8 @@
  * Color variables
  */
 body {
-  font-size: 12px; }
+  font-size: 12px;
+  color: #171717; }
 
 @media (min-width: 800px) {
   body {
@@ -18,7 +19,7 @@ body {
   /* Text and Fonts */
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-  line-height: 1.5em;
+  line-height: 1.75em;
   /* Layout */ }
 
 .App h1 {
@@ -43,6 +44,15 @@ body {
 
 .App p {
   margin: 0; }
+
+.App a {
+  color: inherit;
+  text-decoration: inherit;
+  transition: font-weight, color 0.5s; }
+
+.App a:hover {
+  color: #A6B19C;
+  font-weight: bolder; }
 
 @media (max-width: 650px) {
   .App .inner {

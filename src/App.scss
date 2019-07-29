@@ -6,6 +6,7 @@
 
 body {
   font-size: 12px; 
+  color: $theme-basic-black;
 }
 
 @media (min-width: 800px) {
@@ -27,8 +28,7 @@ body {
   /* Text and Fonts */
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-  line-height: 1.5em;
-  
+  line-height: 1.75em;  
 
   h1 {
     font-family: 'Cabin Sketch';
@@ -56,6 +56,17 @@ body {
 
   p {
     margin: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+    transition: font-weight, color 0.5s;
+  }
+
+  a:hover {
+    color: $theme-lighter;
+    font-weight: bolder;
   }
 
   /* Layout */
