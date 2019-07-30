@@ -39,7 +39,7 @@ li.timeline-event .timeline-card {
   width: 96vw;
   margin-left: -48vw;
   z-index: 2;
-  background: url("/back/waves-2.png");
+  background: 'transparent';
   padding-top: calc(25px - 12px);
   padding-bottom: calc(25px - 12px);
   /* Card content */

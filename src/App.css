@@ -15,7 +15,7 @@ body {
     font-size: 16px; } }
 
 .App {
-  background: url("/back/waves-2.png");
+  background: url("./waves.png");
   /* Text and Fonts */
   text-align: center;
   font-family: 'Montserrat', sans-serif;

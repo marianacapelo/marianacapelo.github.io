@@ -11,10 +11,7 @@
     "react-scripts": "^3.0.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
     "scss": "node-sass --watch src/ -r -o src/",
-    "ai": "node-sass src/components/Triangle.scss -o src/components/Triangle.css",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
