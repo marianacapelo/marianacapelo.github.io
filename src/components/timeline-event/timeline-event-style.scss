@@ -56,7 +56,7 @@ li.timeline-event {
 
     // By default, display regular card with padding justified text
     z-index: 2;
-    background: url('/back/waves-2.png');
+    background: 'transparent';
     padding-top: calc(#{$spacing} - 12px);
     padding-bottom: calc(#{$spacing} - 12px);
     
