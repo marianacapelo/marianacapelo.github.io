@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
+import Background from './components/background'
 import Section from './components/section'
 import Cover from './components/cover'
 import Footer from './components/footer'
@@ -12,7 +13,7 @@ import Hobbie from './components/hobbie'
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <Background>
         <Cover name={'Mariana Capelo'} profession={'Software Engineer'} />
 
         <Section id="intro" className="inner" title='Hi!'>
@@ -88,7 +89,7 @@ class App extends Component {
         </Section>
 
         <Footer>Mariana Capelo</Footer>
-      </div >
+      </Background>
     );
   }
 }
